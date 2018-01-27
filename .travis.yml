@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- node
+- 8
+after_success:
+- npm run coverage
+- npm run build
+deploy:
+  provider: npm
+  email: "$NPM_EMAIL"
+  api_key:
+    secure: jPj01P4MPKQaC+0imWE5bn9vZ6GBhuNlQ21ptYeKteoD0wc4aFvZ1dTogDsdGVBqPqYI3fl1SsfOrft4m9gHj1vTNknTy19mhyCOZJBIWaDSwtyxVeCITfNfOY8AXu0H6kL31TLu0fLWkjAkFZc7oqKG5ZX4xLadnBsa3PpLW0PexQ1Rwfy8hflyitmRMr2YK3aCD/zx7SBzQvX/JhhAHLD2L8jbE6LkoTiXysqE1/r5mVmdcl3nfDL0kwz36IHJ7bBIguKjvNwRhpSu764AsARkwQfjhLTBGith12V12ROonY0rPMtnLDG0cPhcrKSan+eU2r25bJJtdH0CS4fepPQuEF+oPvxMsnYi0Y3qkFBRZ6QQyfKlhhc3WCh88Ihzub4cc5G7JPfkKSXkns8yFDisxseNDFmLqRPK3IA3Xh+VAcJfvqrk7iUX57PM1GewPrgC/br4DMbNRTRWw6JchKPcc60Pwy/svaemjEIDFXWtx+xSuw1S56jtIx0E3UJFziTTjq390hyKjdt0B5ukPobusMbc0r0HVbx+3fc0QxGGSdTgGFeGspMpV4kJo3uYO3XKNxDNGxGazFKQG7s/mnnRcSe9wqtEa+5lIa2Ownn19RLvF+yqHABFG+KhjrlNUdPqLZXC/qFyC1HSb+ZU5/ozJFXtIT864ponD672ZgQ=
+  skip_cleanup: true
+  on:
+    repo: up9cloud/graphql-tools-type-flat-object
+    branch: master
