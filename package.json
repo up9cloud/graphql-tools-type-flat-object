@@ -1,6 +1,6 @@
 {
   "name": "graphql-tools-type-flat-object",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "FlatObject scalar type for graphql-tools",
   "main": "dist/index.js",
   "directories": {
